@@ -11,7 +11,6 @@ $font-2: 'Yellowtail', cursive;
 body {
 	margin: 0;
 	font-family: $font-1;
-    width: 100%;
 }
 
 /*splash*/
@@ -59,6 +58,10 @@ body {
 
 .nav-wrapper {
 	flex: 0 0 50%;
+	justify-content: center;
+	ul {
+		padding-inline-start: 0;
+	}
 }
 
 li {
@@ -173,15 +176,26 @@ line-height: 1.7;
 }
 
 .box-portfolio {
-	width: 250px;
-	height: 350px;
-	background: white;
+	flex:0 0 33.33%;
+	padding: 10px;
 	text-align: center;
-	flex: 0 0 33.333%;
+}
+
+.container-fluid {
+	height: 350px;
+	margin-bottom: 10px;
+	margin: auto;
+	width: 250px;
+	background-color: #ffffff;
+	padding: 0;
+}
+
+.boxing:last-child {
+	margin-top: 10px;
 }
 
 .image-wrapper {
-	width: 250px;
+	width: 200px;
 	height: 250px;
 	position: relative;
 }
@@ -215,7 +229,7 @@ p {
 }
 
 .contact::before {
-line-height: 1.7;
+line-height: 2;
 }
 
 .footer-container {
@@ -223,24 +237,56 @@ line-height: 1.7;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-left: 50px;
 }
 
 .contact-wrapper {
 	padding-left: 100px;
 }
 
-@media (min-width: 745px) and (max-width: 845px) {
+@media (min-width: 990px) and (max-width: 1109px) {
+	.nav-wrapper {
+		li {
+			display: block;
+			padding-left: 50%;
+		}
+	}
+	.section-wrapper {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 751px) and (max-width: 989px) {
+	.nav-wrapper {
+		li {
+			display: block;
+			padding-left: 50%;
+		}
+	}
+	.section-wrapper {
+		display: block;
+	}
+	.footer-container {
+		margin-left: 0;
+	}
 	.contact-wrapper {
 		padding-left: 0;
 	}
 }
 
-@media (min-width: 660px) and (max-width: 744px) {
+@media (min-width: 660px) and (max-width: 750px) {
+	.nav-wrapper {
+		li {
+			display: block;
+			padding-left: 50%;
+		}
+	}
 	.section-wrapper {
-		justify-content: center;
+		display: block;
 	}
 	.footer-container {
 		padding: 15px 50px;
+		margin-left: 0;
 	}
 	.contact-wrapper {
 		padding-left: 0;
@@ -251,6 +297,7 @@ line-height: 1.7;
 	.nav-wrapper {
 		li {
 			display: block;
+			padding-left: 50%;
 		}
 	}
 	.mark-name {
@@ -269,19 +316,31 @@ line-height: 1.7;
 	.footer-container {
 		display: inline;
 		p {
-			margin-left: 80px;
+			margin-left: 100px;
+		}
+		ul {
+			margin-left: 10px;
 		}
 	}
 }
 
 @media (min-width: 280px) and (max-width: 449px) {
+	.up-wrapper {
+		flex-wrap: nowrap;
+	}
 	.nav-wrapper {
+		ul {
+		padding-inline-start: 0;
+		}
 		li {
-			display: block;
+			display: flex;
 		}
 	}
 	.mark-name {
 		padding-left: 30px;
+	}
+	.container {
+		padding-left: 110px;
 	}
 	.splash-center {
 		padding-top: 120px;
@@ -296,17 +355,18 @@ line-height: 1.7;
 		justify-content: center;
 	}
 	.section-title {
+		justify-content: center;
 		h2 {
-			text-align: center;
+			font-size: 15px;
 		}
 	}
 	.footer-container {
 		display: inline;
 		p {
-			margin-left: 80px;
+			margin-left: 40px;
 		}
 	}
 	.contact-wrapper {
-		padding-left: 0;
+		padding-left: 40px;
 	}
 }
