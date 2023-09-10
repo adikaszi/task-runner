@@ -140,6 +140,7 @@ h1 {
 .section-wrapper {
 	padding-top: 30px;
 	display: flex;
+	flex: 0 0 33.33%;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
@@ -242,6 +243,12 @@ line-height: 2;
 
 .contact-wrapper {
 	padding-left: 100px;
+}
+
+@media (min-width: 1010px) and (max-width: 1200px) {
+	.container {
+		padding: 0 0 100px 0;
+	}
 }
 
 @media (min-width: 990px) and (max-width: 1109px) {
