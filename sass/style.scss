@@ -51,10 +51,9 @@ body {
 .mark-name {
 	color: hsl(54, 88%, 51%);
 	position: absolute;
-	padding-left: 100px;
+	padding-left: 25%;
 	font-size: 30px;
 	font-family: $font-2;
-	padding-left: 200px;
 }
 
 .nav-wrapper {
@@ -316,7 +315,6 @@ line-height: 2;
 		}
 	}
 	.mark-name {
-		padding-left: 50px;
 	}
 	.splash-center {
 		padding-top: 130px;
